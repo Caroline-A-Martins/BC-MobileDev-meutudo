@@ -64,7 +64,11 @@ async function getRandomBlock() {
 }
 
 async function logRollResult(characterName, block, diceResult, attribute) {
-  console.log(`${characterName} 🎲 rolou o dado de ${block} ${diceResult} + ${attribute} = ${diceResult+attribute}`);
+  console.log(
+    `${characterName} 🎲 rolou o dado de ${block} ${diceResult} + ${attribute} = ${
+      diceResult + attribute
+    }`
+  );
 }
 
 async function playRaceEngine(character1, character2) {
@@ -136,6 +140,20 @@ async function playRaceEngine(character1, character2) {
         character2.PODER
       );
     }
+
+    //verificando vencedor
+    if (totalTesteSkill1 > totalTesteSkill2) {
+      console.log(`${character1.NOME} marcou um ponto!`);
+      character1.PONTOS++;
+    } else if (totalTesteSkill2 > totalTesteSkill1) {
+      console.log(`${character2.NOME} marcou um ponto!`);
+      character2.PONTOS++;
+    } else {
+      console.log("Empate");
+    }
+    console.log(`Total de pontos ${character1.NOME}: ${character1.PONTOS}`);
+    console.log(`Total de pontos ${character2.NOME}: ${character2.PONTOS}\n`);
+    console.log("------------------------------------------------");
   }
 }
 
