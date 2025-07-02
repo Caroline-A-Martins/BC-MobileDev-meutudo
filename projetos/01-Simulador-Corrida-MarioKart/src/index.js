@@ -180,14 +180,17 @@ async function playRaceEngine(character1, character2) {
       );
     }
 
-    // Verifica quem marcou ponto com base no teste de habilidade
-    if (totalTesteSkill1 > totalTesteSkill2) {
-      console.log(`${character1.NOME} marcou um ponto!`);
-      character1.PONTOS++;
-    } else if (totalTesteSkill2 > totalTesteSkill1) {
-      console.log(`${character2.NOME} marcou um ponto!`);
-      character2.PONTOS++;
+    // Verifica quem marcou ponto com base no teste de habilidade (somente em RETA ou CURVA)
+    if (block !== "CONFRONTO") {
+      if (totalTestSkill1 > totalTestSkill2) {
+        console.log(`${character1.NOME} marcou um ponto!`);
+        character1.PONTOS++;
+      } else if (totalTestSkill2 > totalTestSkill1) {
+        console.log(`${character2.NOME} marcou um ponto!`);
+        character2.PONTOS++;
+      }
     }
+
     console.log("------------------------------------------------");
   }
 }
