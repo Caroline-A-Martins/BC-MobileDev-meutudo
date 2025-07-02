@@ -45,3 +45,9 @@ const player6 = {
   PODER: 5,
   PONTOS: 0,
 };
+
+/*Logica de "Rolar os dados" */
+async function rollDice() {
+  return Math.floor(Math.random() * 6) + 1;
+}
+
