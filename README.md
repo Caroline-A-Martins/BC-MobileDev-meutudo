@@ -30,18 +30,7 @@ Um programa completo e alinhado com as demandas do mercado mobile atual, em parc
 - React Native
 - Node.js
 - JavaScript / TypeScript
-- Firebase
 - APIs REST
-- Git e GitHub
-- Clean Architecture
-- MVVM
-- Testes automatizados
 
----
 
-## 📂 Estrutura deste Repositório
 
-```bash
-├── /projetos/          # Projetos práticos desenvolvidos
-├── /desafios/          # Desafios de código propostos no bootcamp
-└── README.md
