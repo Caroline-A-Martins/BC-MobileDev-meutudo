@@ -1,0 +1,3 @@
+"test": "echo \"Error: no test specified\" && exit 1",
+"myScript": "echo \"Hello world\" && exit 1",
+"iniciar": "node src/index.js && mkdir dist && echo \"pasta dist criada \" "
